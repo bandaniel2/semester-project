@@ -7,7 +7,7 @@ package UI;
  * @version 2019.03.29 changed menu to danish and changed method names to reflect the other example
  * @version 2019.03.29 changed menu to English
  */
-public class MainMenu {
+public class MainUI {
     // instance variables 
     private ProductUI productUI;
     
@@ -15,7 +15,7 @@ public class MainMenu {
     /**
      * Constructor for objects of MainMenu
      */
-    public MainMenu() {
+    public MainUI() {
         // initialise instance variables
         productUI = new ProductUI();
         
