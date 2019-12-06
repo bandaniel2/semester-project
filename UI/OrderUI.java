@@ -10,26 +10,39 @@ package UI;
 public class OrderUI
 {
     // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class OrderUI
-     */
-    public OrderUI()
-    {
-        // initialise instance variables
-        x = 0;
+    OrderController oCon = nwe OrderController();
+    
+    public void start() {
+        boolean exit=false;
+        while (!exit) {
+            int choice = writeOrderUI();
+            if(choice == 1) {
+                
+                System.out.println("In add product");
+            }
+            else if(choice == 2) { 
+                
+                System.out.println("In add package");
+            }
+            else if(choice == 3) {
+                
+                System.out.println("In add copy");
+            }
+            
+            else {
+                
+                exit = true;
+            }
+        }
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    
+    private int writeOrderUI()
     {
-        // put your code here
-        return x + y;
+        TextOptions menu = new TextOptions("\n ***Order menu***", "Go back to the Main Menu");
+        menu.addOption("Add Order");
+        menu.addOption("Add OrderLine");
+        menu.addOption("Add OrderLineOfCopy");
+        return menu.prompt();
     }
 }
+

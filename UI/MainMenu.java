@@ -29,7 +29,7 @@ public class MainUI {
                 productUI.start();    
             }
             else if(choice == 2) { 
-                //dvdMenu.start();
+                orderUI.start();
             }
             else if(choice == 3) {
                 //loanMenu.start(); 
