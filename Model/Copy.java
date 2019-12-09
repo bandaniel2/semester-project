@@ -4,25 +4,25 @@ package Model;
 public class Copy
 {
     private String serialNumber;
-    private Product product;
-    private Location location;
-
-    public Copy(String serialNumber, Product product)
+    
+    public Copy(String serialNumber)
     {
         this.serialNumber = serialNumber;
-        this.product = product;
     }
+        
     
     public String getSerialNumber()
     {
         return serialNumber;
     }
-    public Product getProduct()
+    
+    public void setSerialNumber(String serialNumber)
     {
-        return product;
+        this.serialNumber = serialNumber;
     }
-    public Location getLocation()
-    {
-        return location;
+    
+    public void print()
+    {   
+        System.out.println("Serial number: "+ serialNumber);
     }
 }
