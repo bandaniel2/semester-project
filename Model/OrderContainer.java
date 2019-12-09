@@ -1,32 +1,33 @@
 package Model;
 import java.util.*;
 
-public class OrderContainer
+public class CustomerOrderContainer
 {
-    private ArrayList<GenericOrder> orders;
-    private static OrderContainer oCon;
-    private OrderContainer()
+    private ArrayList<CustomerOrder> orders;
+    private static CustomerOrderContainer instance;
+    
+    private CustomerOrderContainer()
     {
         orders = new ArrayList<>();
     }
-    public static OrderContainer getInstance()
+    
+    public static CustomerOrderContainer getInstance()
     {
-        if (oCon==null)
+        if(instance == null)
         {
-            oCon=new OrderContainer();
+            instance = new CustomerOrderContainer();
         }
-        return oCon;
+        return instance;
     }
-
-    public void add(GenericOrder order)
+    public void add(CustomerOrder order)
     {
         orders.add(order);
     }
-    public void remove(GenericOrder order)
+    public void remove(CustomerOrder order)
     {
         orders.remove(order);
     }
-    public ArrayList<GenericOrder> read()
+    public ArrayList<CustomerOrder> read()
     {
         return orders;
     }
